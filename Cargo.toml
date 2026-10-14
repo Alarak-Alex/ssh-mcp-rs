@@ -1,0 +1,19 @@
+[package]
+name = "ssh-mcp-rs"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "OpenSSH-backed MCP server: commands, remote files, PTY sessions, transfers and forwarding"
+repository = "https://github.com/Alarak-Alex/ssh-mcp-rs"
+
+[[bin]]
+name = "ssh-mcp-rs"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+libc = "0.2"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+regex = "1"
+parking_lot = "0.12"
