@@ -81,7 +81,7 @@ The process inherits SSH authentication environment variables. It does not read 
 - SCP uses the SFTP transport default in contemporary OpenSSH (9.0+). Remote paths are passed literally, so spaces and apostrophes work without accidental extra quoting. Legacy shell-based SCP clients are not the tested transport; rsync still uses separately shell-quoted remote paths.
 - Glob/grep enumerate files under the selected remote path; narrow that path for large trees. Grep regex support depends on the remote grep implementation.
 - Numeric inputs must be finite and valid; unsafe target/option injection is rejected. Some invalid inputs accepted accidentally by the Python implementation are deliberately refused.
-- Windows local execution is unsupported. macOS has been exercised with real SSH; Linux support is covered by the same POSIX implementation and CI checks, not a Windows compatibility layer.
+- Windows local execution is unsupported. macOS has been exercised with real SSH. CI is configured for Linux and macOS; a successfully executed Linux job is required before treating Linux runtime behavior as verified.
 
 ## Checks
 
